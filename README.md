@@ -44,25 +44,25 @@ Dokumentasi endpoint lengkap, termasuk skenario _Success_ dan _Error Handling_, 
 ## 🚀 Instalasi & Persiapan
 
 1. **Clone & Install**:
+   git clone [https://github.com/Luqman89/api-e-commers-learn]
 
     ```bash
-    git clone [https://github.com/Luqman89/api-e-commers-learn](https://github.com/Luqman89/api-e-commers-learn)
     cd api-e-commers-learn
     composer install
     ```
 
 2. **Environment Setup**:
+   Salin file .env.example, sesuaikan konfigurasi database Anda, lalu generate key:
 
     ```bash
-    Salin file .env.example, sesuaikan konfigurasi database Anda, lalu generate key:
     cp .env.example .env
     php artisan key:generate
     ```
 
 3. **Migrasi & Seeder**:
+   Jalankan migrasi untuk membuat tabel dengan struktur ULID dan data awal:
 
     ```bash
-    Jalankan migrasi untuk membuat tabel dengan struktur ULID dan data awal:
     php artisan migrate --seed
     ```
 
