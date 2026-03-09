@@ -17,13 +17,17 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
-        $name = fake()->word();
+        // Daftar kategori yang umum untuk toko e-commerce
+        $categories = ['Sneakers', 'Running Shoes', 'Formal Shoes', 'Sandals', 'Sportswear'];
+        
+        // Pilih satu secara random
+        $name = fake()->unique()->randomElement($categories);
 
         return [
-            'name' => $name,
-            'slug' => Str::slug($name),
+            'name'        => $name,
+            'slug'        => Str::slug($name),
             'brand'       => fake()->randomElement(['Nike', 'Adidas', 'Puma', 'Reebok']),
-            'is_active' => true,
+            'is_active'   => true,
         ];
     }
 }
